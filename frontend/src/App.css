@@ -1,0 +1,166 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+utton:hover{
+	background:linear-gradient(#141e30,#243b55)
+}
+h3{
+	font-size:15px;
+	font-family:Roboto,sans-serif;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+    padding:10px;
+    margin:20px;
+    background-image:linear-gradient(to right,#11CD8A,#243b55);
+      background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+  }
+  .white{
+  
+    font-family:Abel;
+    font-size: x-large;
+    font-style: oblique;
+    line-height: normal;
+    font-weight: bolder;
+    font-variant: normal;
+    text-transform: inherit;
+    color: #FFF;
+    overflow:auto;
+     background-image: linear-gradient(to right,#11CD8A,#243b55);
+     width: 40%;
+		
+}
+
+
+
+
+  
+  button:hover{
+    background:linear-gradient(#141e30,#243b55)
+  }
+  
+ 
+  input[type=text],input[type=password],input[type=number],button{
+    width:100%;
+    padding:8px 12px;
+    margin:8px 0px;
+    display:inline-block;
+    box-sizing:border-box;
+    color:white;
+    background-color:transparent;
+    border:1px solid white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+  }
+  
+
+
+.striker{
+  color: red;
+  text-decoration: line-through;
+}
+input[type=checkbox]:checked + label
+{
+text-decoration: line-through;
+color: red;
+}
+
+  .todo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px auto;
+    color: #fff;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 118, 20, 1) 0%,
+      rgba(255, 84, 17, 1) 100%
+    );
+    font-size:larger;
+    padding: 16px;
+    border-radius: 5px;
+    width: 90%;
+    border-collapse: separate;
+    border-spacing:  15px;
+  }
+
+  
+  .todo-row:nth-child(4n + 1) {
+    background: linear-gradient(
+      90deg,
+      rgba(93, 12, 255, 1) 0%,
+      rgba(155, 0, 250, 1) 100%
+    );
+  }
+  
+  .todo-row:nth-child(4n + 2) {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 12, 241, 1) 0%,
+      rgba(250, 0, 135, 1) 100%
+    );
+  }
+  
+  .todo-row:nth-child(4n + 3) {
+    background: linear-gradient(
+      90deg,
+      rgba(20, 159, 255, 1) 0%,
+      rgba(17, 122, 255, 1) 100%
+    );
+  }
+  .fortable{
+    position: absolute;
+    width: 40%;
+   left: 30%;
+   right: 70%;
+     top:20%;
+     bottom:80%;
+     border-collapse: separate;
+     border-spacing: 20px;
+  }
+  
+    
+  
