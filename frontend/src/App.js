@@ -35,7 +35,7 @@ deltask=(id)=>
 //alert("Do you want to delete")
 if(window.confirm('Do you want to delete'))
 {
-axios.delete("http://localhost:8080/loader/"+id)
+axios.delete("http://localhost:8080/delete/"+id)
 
 }
 else
@@ -46,7 +46,7 @@ updated=(id)=>
 {
   if(window.confirm('Do you want to mark it Complete'))
   {
-    axios.put("http://localhost:8080/loader/"+id)
+    axios.put("http://localhost:8080/update/"+id)
   
   }
 
