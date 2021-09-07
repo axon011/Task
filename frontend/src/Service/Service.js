@@ -1,6 +1,6 @@
 import axios from 'axios'
-const ADDTASK_APi='http://localhost:8080/loader/';
-const TASK_REST_API='http://localhost:8080/loader/';
+const ADDTASK_APi='http://localhost:8080/save';
+const TASK_REST_API='http://localhost:8080/view';
 class Service
 {
     getTask()
