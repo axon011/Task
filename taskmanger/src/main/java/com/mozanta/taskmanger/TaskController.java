@@ -10,33 +10,31 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/loader")
 @CrossOrigin("http://localhost:3000")
 public class TaskController{
 
     @Autowired
     private TaskRepository taskRepository;
 
-    @GetMapping("/")
+    @GetMapping("/view")
     public List<Tasks> GetTasks(){
         return taskRepository.findAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("id/{id}")
     public Tasks GetTasks(@PathVariable String id){
         return taskRepository.findById(id).orElse(null);
     }
-    @PostMapping("/")
+    @PostMapping("/save")
     public Tasks postMethodName(@RequestBody Tasks tasks){
         tasks.setStatus("Created");
         return taskRepository.save(tasks);
     }
     
-    @PutMapping("/{id}") 
+    @PutMapping("/update/{id}") 
 	public String update (@PathVariable String id) {
 		Optional<Tasks> Task = Optional.of(taskRepository.findById(id).get());
 
@@ -50,7 +48,7 @@ public class TaskController{
 	return "No Task presented";
 	}
     
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public String DeleteTask(@PathVariable String id){
     taskRepository.deleteById(id);
     return id;
