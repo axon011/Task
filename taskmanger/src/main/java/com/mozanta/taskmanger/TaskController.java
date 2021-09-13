@@ -30,6 +30,7 @@ public class TaskController{
     public Tasks postMethodName(@RequestBody Tasks tasks){
         tasks.setStatus("Created");
         return taskRepository.save(tasks);
+        
     } 
     
     @PutMapping("/update/{id}") 
