@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+
+
 @RestController
 @CrossOrigin("http://localhost:3000")
 public class TaskController{
@@ -21,18 +23,14 @@ public class TaskController{
 
     @GetMapping("/view")
     public List<Tasks> GetTasks(){
-        return taskRepository.findAll();
+        return  taskRepository.findAll();
     }
 
-    @GetMapping("id/{id}")
-    public Tasks GetTasks(@PathVariable String id){
-        return taskRepository.findById(id).orElse(null);
-    }
     @PostMapping("/save")
     public Tasks postMethodName(@RequestBody Tasks tasks){
         tasks.setStatus("Created");
         return taskRepository.save(tasks);
-    }
+    } 
     
     @PutMapping("/update/{id}") 
 	public String update (@PathVariable String id) {
