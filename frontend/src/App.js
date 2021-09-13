@@ -34,8 +34,6 @@ Service.getTask().then((res)=>
 deltask=(id)=>
 {
 
-//alert("Do you want to delete")
-
 if(window.confirm('Do you want to delete'))
 {
 axios.delete("http://localhost:8080/delete/"+id)
