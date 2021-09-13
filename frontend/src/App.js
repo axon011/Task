@@ -20,10 +20,7 @@ class App extends React.Component {
   {
     this.setState({task:event.target.value})
   }
-  changeStat=(event)=>
-  {
-    this.setState({status:event.target.value})
-  }
+  
 componentDidMount(){
 Service.getTask().then((res)=>
 {
