@@ -70,7 +70,7 @@ body {
     color: #FFF;
     overflow:auto;
      background-image: linear-gradient(to right,#11CD8A,#243b55);
-     width: 40%;
+     /*width: 40%;*/
 		
 }
 
@@ -98,7 +98,7 @@ body {
   
 
 
-.striker{
+/*.striker{
   color: red;
   text-decoration: line-through;
 }
@@ -107,7 +107,7 @@ input[type=checkbox]:checked + label
 text-decoration: line-through;
 color: red;
 }
-
+*/
   .todo-row {
     display: flex;
     justify-content: space-between;
@@ -153,7 +153,8 @@ color: red;
   }
   .fortable{
     position: absolute;
-    width: 40%;
+    min-width: 40%;
+    width:auto;
    left: 30%;
    right: 70%;
      top:20%;
