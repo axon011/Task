@@ -7,7 +7,7 @@ class App extends React.Component {
  state ={
     tasks:[],
     id:0,
-    task:''
+    task:'',
   }
 
   saveTask=()=>
@@ -20,19 +20,25 @@ class App extends React.Component {
   {
     this.setState({task:event.target.value})
   }
+  changeStat=(event)=>
+  {
+    this.setState({status:event.target.value})
+  }
 componentDidMount(){
 Service.getTask().then((res)=>
 {
   this.setState({
-    tasks:res.data,}
+    tasks:res.data,
+  }
     )
 });
 }
-del
+
 deltask=(id)=>
 {
 
 //alert("Do you want to delete")
+
 if(window.confirm('Do you want to delete'))
 {
 axios.delete("http://localhost:8080/delete/"+id)
@@ -42,9 +48,18 @@ else
 window.location.reload();
 window.location.reload();
 }
-updated=(id)=>
+updated=(id,status)=>
 {
-  if(window.confirm('Do you want to mark it Complete'))
+
+
+  
+if(status==='Completed')
+{
+  alert('Already Checked.....');
+}
+
+  
+  else if(window.confirm('Do you want to mark it Complete'))
   {
     axios.put("http://localhost:8080/update/"+id)
   
@@ -53,6 +68,7 @@ updated=(id)=>
   else
   window.location.reload();
   window.location.reload();
+
 }
 
   render(){
@@ -91,13 +107,15 @@ updated=(id)=>
                 
                 <td>
 
-                     <input name='pack' defaultChecked={tasks.status === "Completed"} type="checkbox" className='striker' value="1" onClick = {()=>this.updated(tasks.id) }/>
+                     <input name='pack' defaultChecked={tasks.status === "Completed"} type="checkbox" className='striker' value="1" onClick = {()=>this.updated(tasks.id,tasks.status)} 
+                     />
                     <span></span>
                      </td>
                     
                     <td > 
                     <label for="striker">
-                      
+                    
+              
              {tasks.task}
              </label>
                     </td>
